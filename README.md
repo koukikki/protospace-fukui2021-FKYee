@@ -12,8 +12,8 @@
 | post               |  text  | null: false |
 
 ### Association
-has_many :prototypes
-has_many :comments
+has_many :prototype
+has_many :comment
 
 
 
@@ -21,13 +21,13 @@ has_many :comments
 
 | Column       | Type   | Options     |
 | ------------ | ------ | ----------- |
-| user_id      | string | null: false |
-| prototype_id | string | null: false |
+| user_id      | references | null: false, foreign_key: true|
+| prototype_id | references | null: false, foreign_key: true|
 | text         |  text  | null: false |
 
 ### Association
-belongs_to :users
-belongs_to :prototypes
+belongs_to :user
+belongs_to :prototype
 
 
 
@@ -36,12 +36,12 @@ belongs_to :prototypes
 
 | Column       | Type   | Options     |
 | ------------ | ------ | ----------- |
-| user_id      | string | null: false |
+| user_id      | references | null: false, foreign_key: true|
 | name         | string | null: false |
 | catch_copy   |  text  | null: false |
 | concept      |  text  | null: false |
 | image        |  text  | null: false |
 
 ### Association
-has_many :comments
-belongs_to :users
+has_many :comment
+belongs_to :user

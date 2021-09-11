@@ -4,6 +4,6 @@ class Prototype < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-         has_many :comments
-         belongs_to :users
+         has_many :comment
+         belongs_to :user
 end

@@ -4,6 +4,6 @@ class Comment < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-         belongs_to :users
-         belongs_to :prototypes
+         belongs_to :user
+         belongs_to :prototype
 end

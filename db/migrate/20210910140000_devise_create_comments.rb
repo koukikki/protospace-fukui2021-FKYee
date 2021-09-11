@@ -6,8 +6,8 @@ class DeviseCreateComments < ActiveRecord::Migration[6.0]
       ## Database authenticatable
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
-      t.string :user_id,            null: false
-      t.string :prototype_id,       null: false
+      t.references :user,           null: false,foreign_key: true
+      t.references :prototype,      null: false,foreign_key: true
       t.text   :text,               null: false
 
       ## Recoverable
