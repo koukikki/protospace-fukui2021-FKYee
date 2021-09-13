@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  root to: 'prototypes#index'
-
+  devise_for :users
   devise_for :prototypes
   devise_for :comments
-  devise_for :users
+
+  root to: 'prototypes#index'
+
 end
