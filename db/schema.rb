@@ -28,7 +28,6 @@ ActiveRecord::Schema.define(version: 2021_09_10_140000) do
   end
 
   create_table "prototypes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "user_id", null: false
     t.string "name", null: false
     t.text "catch_copy", null: false
     t.text "concept", null: false
@@ -42,7 +41,6 @@ ActiveRecord::Schema.define(version: 2021_09_10_140000) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_prototypes_on_email", unique: true
     t.index ["reset_password_token"], name: "index_prototypes_on_reset_password_token", unique: true
-    t.index ["user_id"], name: "index_prototypes_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -64,5 +62,4 @@ ActiveRecord::Schema.define(version: 2021_09_10_140000) do
 
   add_foreign_key "comments", "prototypes"
   add_foreign_key "comments", "users"
-  add_foreign_key "prototypes", "users"
 end
