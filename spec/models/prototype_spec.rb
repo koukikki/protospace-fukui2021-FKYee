@@ -5,12 +5,10 @@ RSpec.describe Prototype, type: :model do
     @prototype = FactoryBot.build(:prototype)
   end
   describe 'プロトタイプ投稿機能' do
-    
     context 'プロトタイプが投稿できる場合' do
       it 'nameとcatch_copyとconceptとimageが存在していれば保存できる' do
         expect(@prototype).to be_valid
       end
-
     end
     context 'プロトタイプが投稿できない場合' do
       it 'nameが空では登録できない' do
