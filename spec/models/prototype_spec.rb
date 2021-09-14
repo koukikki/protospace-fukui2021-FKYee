@@ -12,26 +12,36 @@ RSpec.describe Prototype, type: :model do
       end
 
     end
-    #context 'プロトタイプが投稿できない場合' do
-      #it 'nameが空では登録できない' do
+    context 'プロトタイプが投稿できない場合' do
+      it 'nameが空では登録できない' do
+        @prototype.name = ''
+        @prototype.valid?
+        expect(@prototype.errors.full_messages).to include("Name can't be blank")
+      end
 
-      #end
+      it 'catch_copyが空では登録できない' do
+        @prototype.catch_copy = ''
+        @prototype.valid?
+        expect(@prototype.errors.full_messages).to include("Catch copy can't be blank")
+      end
 
-      #it 'catch_copyが空では登録できない' do
+      it 'conceptが空では登録できない' do
+        @prototype.concept = ''
+        @prototype.valid?
+        expect(@prototype.errors.full_messages).to include("Concept can't be blank")
+      end
 
-      #end
+      it 'imageが空では登録できない' do
+        @prototype.image = nil
+        @prototype.valid?
+        expect(@prototype.errors.full_messages).to include("Image can't be blank")
+      end
 
-      #it 'conceptが空では登録できない' do
-
-      #end
-
-      #it 'imageが空では登録できない' do
-
-      #end
-
-      #it 'userが紐付いていないと保存できない' do
-
-      #end
-    #end
+      it 'userが紐付いていないと保存できない' do
+        @prototype.user = nil
+        @prototype.valid?
+        expect(@prototype.errors.full_messages).to include('User must exist')
+      end
+    end
   end
 end
