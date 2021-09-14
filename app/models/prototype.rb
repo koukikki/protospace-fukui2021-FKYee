@@ -9,4 +9,7 @@ class Prototype < ApplicationRecord
     validates :concept
     validates :image
   end
+
+  has_one_attached :image
+
 end
