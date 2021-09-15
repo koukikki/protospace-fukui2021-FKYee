@@ -9,3 +9,4 @@ FactoryBot.define do
     post {'しがないITエンジニア'}
   end
 end
+

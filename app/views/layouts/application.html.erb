@@ -23,7 +23,9 @@
               <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
               <%= link_to "New Proto", root_path, class: :nav__btn %>
             </div>
+
           <%# // ログインしているときは上記を表示するようにしましょう %>
+          <% else %>
           <%# ログインしていないときは以下を表示するようにしましょう %>
           <% else %>
             <div class="nav__right">
@@ -32,6 +34,7 @@
             </div>
             <% end %>
           <%# // ログインしていないときは上記を表示するようにしましょう %>
+          <% end %>
         </div>
       </div>
     </header>
