@@ -8,6 +8,9 @@
         <%= form_with model: @user, url: user_registration_path, local: true do |f| %>
         <%= devise_error_messages!%>
 
+        <%= form_with model: @user, url: user_registration_path, local: true do |f| %>
+        <%= render partial: "prototypes/error_messages" %>
+        
         <div class="field">
           <%= f.label :email, "メールアドレス" %><br />
           <%= f.email_field :email, id:"user_email", autofocus: true, autocomplete: "email" %>

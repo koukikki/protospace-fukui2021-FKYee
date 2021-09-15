@@ -5,4 +5,11 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :prototypes
+
+  with_options presence: true do 
+   validates :name
+   validates :profile
+   validates :affiliation
+   validates :post
+  end
 end
