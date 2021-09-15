@@ -7,6 +7,6 @@ FactoryBot.define do
     profile {'こんにちは！僕はtestと言います！'}
     affiliation {'ふくいITカレッジ'}
     post {'しがないITエンジニア'}
-
   end
 end
+
