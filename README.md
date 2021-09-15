@@ -11,8 +11,8 @@
 | position           |  text  | null: false |
 
 ### Association
-has_many :prototype
-has_many :comment
+- has_many :prototypes
+- has_many :comments
 
 
 ## prototypes テーブル
@@ -25,8 +25,8 @@ has_many :comment
 | concept      |  text  | null: false |
 
 ### Association
-has_many :comment
-belongs_to :user
+- has_many :comments
+- belongs_to :user
 
 
 ## comments テーブル
@@ -38,5 +38,5 @@ belongs_to :user
 | text         |  text  | null: false |
 
 ### Association
-belongs_to :user
-belongs_to :prototype
+- belongs_to :user
+- belongs_to :prototype
