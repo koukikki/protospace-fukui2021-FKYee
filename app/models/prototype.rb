@@ -1,6 +1,7 @@
 class Prototype < ApplicationRecord
   has_many :comments
   belongs_to :user
+  has_one_attached :image
 
   with_options presence: true do
     validates :name
@@ -9,5 +10,4 @@ class Prototype < ApplicationRecord
     validates :image
   end
 
-  has_one_attached :image
 end
