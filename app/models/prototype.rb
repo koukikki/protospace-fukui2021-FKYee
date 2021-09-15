@@ -9,5 +9,4 @@ class Prototype < ApplicationRecord
     validates :concept
     validates :image
   end
-
 end

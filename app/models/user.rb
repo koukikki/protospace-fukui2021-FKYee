@@ -6,10 +6,10 @@ class User < ApplicationRecord
 
   has_many :prototypes
 
-  with_options presence: true do 
-   validates :name
-   validates :profile
-   validates :affiliation
-   validates :post
+  with_options presence: true do
+    validates :name
+    validates :profile
+    validates :affiliation
+    validates :position
   end
 end
