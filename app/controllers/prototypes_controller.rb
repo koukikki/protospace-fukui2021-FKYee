@@ -1,9 +1,5 @@
 class PrototypesController < ApplicationController
-<<<<<<< Updated upstream
-  before_action :move_to_sign_in, only: [:new]
-=======
-  before_action :authenticate_user!, only: [:new]
->>>>>>> Stashed changes
+ before_action :authenticate_user!, only: [:new]
 
   def index
     @prototypes = Prototype.all
@@ -21,6 +17,12 @@ class PrototypesController < ApplicationController
       render :new
     end
   end
+
+  def show
+    @prototype = Prototype.find(params[:id])
+  end
+
+
 
   private
 
