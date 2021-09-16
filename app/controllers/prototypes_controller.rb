@@ -1,5 +1,5 @@
 class PrototypesController < ApplicationController
-  before_action :move_to_sign_in, except: [:index]
+  before_action :move_to_sign_in, only: [:new]
 
   def index
     @prototypes = Prototype.all
