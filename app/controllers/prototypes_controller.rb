@@ -1,5 +1,5 @@
 class PrototypesController < ApplicationController
- before_action :authenticate_user!, only: [:new]
+ before_action :authenticate_user!, only: [:new, :edit]
 
   def index
     @prototypes = Prototype.all
@@ -23,6 +23,7 @@ class PrototypesController < ApplicationController
   end
 
   def edit
+    @prototype = Prototype.new
   end
 
 
