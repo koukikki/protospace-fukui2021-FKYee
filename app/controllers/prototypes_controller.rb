@@ -1,5 +1,9 @@
 class PrototypesController < ApplicationController
+<<<<<<< Updated upstream
   before_action :move_to_sign_in, only: [:new]
+=======
+  before_action :authenticate_user!, only: [:new]
+>>>>>>> Stashed changes
 
   def index
     @prototypes = Prototype.all
@@ -23,11 +27,4 @@ class PrototypesController < ApplicationController
   def prototype_params
     params.require(:prototype).permit(:name, :catch_copy, :concept, :image).merge(user_id: current_user.id)
   end
-
-  def move_to_sign_in
-    unless user_signed_in?
-      redirect_to user_session_path
-    end
-  end
-
 end
