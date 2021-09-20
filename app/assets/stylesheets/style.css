@@ -215,6 +215,7 @@ a {
 }
 
 .prototype__comments{
+  display: flex;
   background-color: #f6f6f6;
   padding: 20px;
   margin: 28px 0 40px 0;
@@ -229,6 +230,9 @@ a {
   padding-bottom: 5px;
 }
 
+.comment__assessment{
+  margin-bottom: 20px;
+}
 .comment_user{
   font-size: 16px;
   color: #999;
