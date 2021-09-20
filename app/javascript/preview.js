@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
   const createImageHTML = (blob) => {
     const imageElement = document.createElement('div');
+    imageElement.id = "currentImage"
     const blobImage = document.createElement('img');
       blobImage.setAttribute('src', blob);
       imageElement.appendChild(blobImage);
@@ -11,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function(){
   };
 
   document.getElementById('prototype_image').addEventListener('change', function(e){
-    const imageContent = document.querySelector('img');
+    const imageContent = document.querySelector('#currentImage');
       if (imageContent){
         imageContent.remove();
       }
