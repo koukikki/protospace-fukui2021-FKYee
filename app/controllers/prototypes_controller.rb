@@ -1,5 +1,5 @@
 class PrototypesController < ApplicationController
- before_action :authenticate_user!, only: [:new]
+ before_action :authenticate_user!, only: [:new, :create, :destroy]
 
   def index
     @prototypes = Prototype.all
@@ -20,6 +20,14 @@ class PrototypesController < ApplicationController
 
   def show
     @prototype = Prototype.find(params[:id])
+    @comment = Comment.new
+    @comments = @prototype.comments.includes(:user)
+  end
+
+  def destroy
+    prototype = Prototype.find(params[:id])
+    prototype.destroy
+    redirect_to root_path
   end
 
 
