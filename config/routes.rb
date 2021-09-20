@@ -4,10 +4,10 @@ Rails.application.routes.draw do
   
   root to: 'prototypes#index'
 
-
   resources :users, only: :show
   resources :prototypes, only: [:new, :create, :show, :destroy] do
     resources :comments, only: :create
   end
+
 
 end
