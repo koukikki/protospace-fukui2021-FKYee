@@ -3,7 +3,7 @@ class CreateComments < ActiveRecord::Migration[6.0]
     create_table :comments do |t|
       t.references :user,           null: false,foreign_key: true
       t.references :prototype,      null: false,foreign_key: true
-      t.text   :text,               
+      t.text   :text               
       t.integer :score,             null: false
       t.timestamps
     end
