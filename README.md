@@ -27,7 +27,6 @@
 ### Association
 - has_many :comments
 - belongs_to :user
-- has_many :assessment
 
 ## comments テーブル
 
@@ -41,15 +40,4 @@
 ### Association
 - belongs_to :user
 - belongs_to :prototype
-- belongs_to :assessment
 
-## assessments テーブル
-
-| Column       | Type   | Options     |
-| ------------ | ------ | ----------- |
-| prototype    | references | null: false, foreign_key: true|
-| score        | integer | null: false |
-
-### Association
-- belongs_to :comment
-- belongs_to :prototype
