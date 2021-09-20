@@ -40,3 +40,11 @@
 ### Association
 - belongs_to :user
 - belongs_to :prototype
+
+
+## assessments テーブル
+
+| Column       | Type   | Options     |
+| ------------ | ------ | ----------- |
+| prototype    | references | null: false, foreign_key: true|
+| score        | integer | null: false |
