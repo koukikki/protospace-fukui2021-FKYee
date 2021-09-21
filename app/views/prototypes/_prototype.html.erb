@@ -2,7 +2,11 @@
   <%= link_to image_tag(prototype.image, class: :card__img ), prototype_path(prototype.id) %>
   <%#= image_tag prototype.image, class: :card__img %>
   <div class="card__body">
-    <%= link_to prototype.name, root_path, class: :card__title%> <%= "評価: #{prototype.assessment_ave}" %>
+    <% if prototype.assessment_ave.nil?%>
+      <%= link_to prototype.name, root_path, class: :card__title%> <%= "平均点: -点" %>
+    <% else %>
+      <%= link_to prototype.name, root_path, class: :card__title%> <%= "平均点: #{prototype.assessment_ave}点" %>
+    <% end %>
     <p class="card__summary">
       <%= prototype.catch_copy %>
     </p>
