@@ -27,13 +27,13 @@ class PrototypesController < ApplicationController
   end
 
   def destroy
-    redirect_to root_path unless current_user.id == @prototype.user_id
+    redirect_root
     @prototype.destroy
     redirect_to root_path
   end
 
   def edit
-    redirect_to root_path unless current_user.id == @prototype.user_id
+    redirect_root
   end
 
   def update
@@ -53,5 +53,9 @@ class PrototypesController < ApplicationController
 
   def prototype_params
     params.require(:prototype).permit(:name, :catch_copy, :concept, :image).merge(user_id: current_user.id)
+  end
+
+  def redirect_root
+    redirect_to root_path unless current_user.id == @prototype.user_id
   end
 end
