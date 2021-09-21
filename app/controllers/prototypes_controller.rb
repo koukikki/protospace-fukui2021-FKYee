@@ -1,5 +1,4 @@
 class PrototypesController < ApplicationController
-
   before_action :set_prototype, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:new, :edit, :create, :destroy]
 
@@ -28,7 +27,7 @@ class PrototypesController < ApplicationController
   end
 
   def destroy
-    @prototype = Prototype.find(params[:id])
+    redirect_to root_path unless current_user.id == @prototype.user_id
     @prototype.destroy
     redirect_to root_path
   end
