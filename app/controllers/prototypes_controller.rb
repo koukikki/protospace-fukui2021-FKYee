@@ -9,6 +9,7 @@ class PrototypesController < ApplicationController
 
   def new
     @prototype = Prototype.new
+
   end
 
   def create
@@ -27,6 +28,7 @@ class PrototypesController < ApplicationController
   end
 
   def destroy
+    redirect_to root_path unless current_user.id == @prototype.user_id
     prototype = Prototype.find(params[:id])
     prototype.destroy
     redirect_to root_path
