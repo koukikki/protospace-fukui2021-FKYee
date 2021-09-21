@@ -1,7 +1,7 @@
 class PrototypesController < ApplicationController
 
   before_action :set_prototype, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, only: [:new, :edit, :destroy]
+  before_action :authenticate_user!, only: [:new, :edit, :create, :destroy]
 
   def index
     @prototypes = Prototype.includes(:user)
@@ -9,6 +9,7 @@ class PrototypesController < ApplicationController
 
   def new
     @prototype = Prototype.new
+
   end
 
   def create
