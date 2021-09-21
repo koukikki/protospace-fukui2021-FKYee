@@ -23,6 +23,7 @@
 | name         | string | null: false |
 | catch_copy   |  text  | null: false |
 | concept      |  text  | null: false |
+|assessment_ave| integer|             |
 
 ### Association
 - has_many :comments

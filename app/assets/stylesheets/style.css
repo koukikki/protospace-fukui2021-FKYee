@@ -215,10 +215,13 @@ a {
 }
 
 .prototype__comments{
-  display: flex;
   background-color: #f6f6f6;
   padding: 20px;
   margin: 28px 0 40px 0;
+}
+
+.flex{
+  display: flex;
 }
 
 .comments_lists{
@@ -231,7 +234,7 @@ a {
 }
 
 .comment__assessment{
-  margin-bottom: 20px;
+  margin: 10px 0 0 40px;
 }
 .comment_user{
   font-size: 16px;

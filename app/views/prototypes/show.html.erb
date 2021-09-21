@@ -34,14 +34,16 @@
       <div class="prototype__comments">
         <% if user_signed_in? %>
           <%= form_with model: [@prototype, @comment], local: true do |f|%>
+           <div class="flex">
             <div class="field">
               <%= f.label :text, "コメント" %><br />
               <%= f.text_field :text, id:"comment_text" %>
+            </div>
             <div class="comment__assessment">
               <%= f.label :score, "評価" %><br />
               <%= f.select :score, [["1", "1"], ["2", "2"], ["3","3"], ["4","4"], ["5","5"]], include_blank: "選択して下さい" %>
             </div>
-            </div>
+          </div>
             <div class="actions">
               <%= f.submit "送信する", class: :form__btn  %>
             </div>
@@ -52,6 +54,7 @@
             <li class="comments_list">
               <%= "#{comment.text}"%>
               <%= link_to "#{comment.user.name}", "/users/#{comment.user.id}", class: :comment_user %>
+              <%= "評価: #{comment.score}点" %>
             </li>
          </ul>
         <% end %>
