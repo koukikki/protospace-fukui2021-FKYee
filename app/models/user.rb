@@ -14,4 +14,8 @@ class User < ApplicationRecord
     validates :affiliation
     validates :position
   end
+
+  def self.from_omniauth(auth)
+    
+  end
 end
