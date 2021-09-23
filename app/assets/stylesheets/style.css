@@ -224,6 +224,15 @@ a {
   display: flex;
 }
 
+.flex_card{
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__assessment{
+  margin-top: 40px;
+}
+
 .comments_lists{
   padding-left: 20px;
 }
