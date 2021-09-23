@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 2021_09_22_055543) do
     t.bigint "user_id", null: false
     t.bigint "prototype_id", null: false
     t.text "text", null: false
+    t.integer "score", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["prototype_id"], name: "index_comments_on_prototype_id"
@@ -48,6 +49,7 @@ ActiveRecord::Schema.define(version: 2021_09_22_055543) do
     t.string "name", null: false
     t.text "catch_copy", null: false
     t.text "concept", null: false
+    t.integer "assessment_ave"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_prototypes_on_user_id"

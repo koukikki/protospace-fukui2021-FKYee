@@ -23,11 +23,11 @@
 | name         | string | null: false |
 | catch_copy   |  text  | null: false |
 | concept      |  text  | null: false |
+|assessment_ave| integer| null: false |
 
 ### Association
 - has_many :comments
 - belongs_to :user
-
 
 ## comments テーブル
 
@@ -35,19 +35,11 @@
 | ------------ | ------ | ----------- |
 | user         | references | null: false, foreign_key: true|
 | prototype    | references | null: false, foreign_key: true|
-| text         |  text  | null: false |
+| text         |  text   | null: false |
+| score        | integer | null: false|
 
 ### Association
 - belongs_to :user
 - belongs_to :prototype
 
-## sns_credential テーブル
 
-| Column       | Type       | Options     |
-| ------------ |----------- | ----------- |
-| user         | references | null: false, foreign_key: true |
-| provider     | string     |             |
-| uid          | string     |             |
-
-### Association
-- belongs_to :user

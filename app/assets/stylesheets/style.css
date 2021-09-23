@@ -247,6 +247,19 @@ a {
   margin: 28px 0 40px 0;
 }
 
+.flex{
+  display: flex;
+}
+
+.flex_card{
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__assessment{
+  margin-top: 40px;
+}
+
 .comments_lists{
   padding-left: 20px;
 }
@@ -256,6 +269,9 @@ a {
   padding-bottom: 5px;
 }
 
+.comment__assessment{
+  margin: 10px 0 0 40px;
+}
 .comment_user{
   font-size: 16px;
   color: #999;
