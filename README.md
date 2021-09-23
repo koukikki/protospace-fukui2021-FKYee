@@ -23,7 +23,7 @@
 | name         | string | null: false |
 | catch_copy   |  text  | null: false |
 | concept      |  text  | null: false |
-|assessment_ave| integer|             |
+|assessment_ave| integer| null: false |
 
 ### Association
 - has_many :comments
@@ -35,7 +35,7 @@
 | ------------ | ------ | ----------- |
 | user         | references | null: false, foreign_key: true|
 | prototype    | references | null: false, foreign_key: true|
-| text         |  text  |  |
+| text         |  text   | null: false |
 | score        | integer | null: false|
 
 ### Association
