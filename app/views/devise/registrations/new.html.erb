@@ -43,12 +43,19 @@
           <%= f.label :position, "役職" %><br />
           <%= f.text_area :position, class: :form__text, id:"user_position" %>
         </div>
-
+        <div class="sign_up">
         <div class="actions">
           <%= f.submit "新規登録", class: :form__btn  %>
         </div>
-        <%= link_to "Facebookで登録", user_facebook_omniauth_authorize_path, method: :post, class: :sns_link %>
-        <%= link_to "Googleで登録", user_google_oauth2_omniauth_authorize_path, method: :post, class: :sns_link %>
+        <div class="facebook_link">
+          <i class="fab fa-facebook-square facebook_logo"></i>
+          <%= link_to "Facebookで登録", user_facebook_omniauth_authorize_path, method: :post, class: :sns_link %>
+        </div>
+        <div class="google_link">
+          <i class="fab fa-google google_logo"></i>
+          <%= link_to "Googleで登録", user_google_oauth2_omniauth_authorize_path, method: :post, class: :sns_link %>
+        </div>
+        </div>
       <% end %>
     </div>
   </div>

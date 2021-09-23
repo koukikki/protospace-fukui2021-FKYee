@@ -99,6 +99,10 @@ a {
   margin-bottom: 40px;
 }
 
+.sign_up {
+  display: flex;
+}
+
 .form__btn{
   display: inline-block;
   padding: 0.4em 1.6em;
@@ -118,9 +122,28 @@ a {
   cursor: pointer;
 }
 
+.facebook_link {
+  margin: 0 10px 0 20px;
+}
+
+.facebook_logo {
+  color: #315096;
+}
+
+.google_link {
+  margin: 0 10px 0 10px;
+}
+
+.google_logo {
+  color: #DD5144;
+}
+
 .sns_link {
-  margin: 0 20px 10px 0;
   color: #63aef5;
+}
+
+.sns_link:hover {
+  opacity: 0.7;
 }
 
 /* メイン */
@@ -165,7 +188,6 @@ a {
   text-align: right;
   text-decoration: underline;
 }
-
 /* 詳細ページ */
 .prototype__wrapper{
   min-height: calc(100vh - 161px);
