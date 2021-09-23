@@ -40,3 +40,14 @@
 ### Association
 - belongs_to :user
 - belongs_to :prototype
+
+## sns_credential テーブル
+
+| Column       | Type       | Options     |
+| ------------ |----------- | ----------- |
+| user         | references | null: false, foreign_key: true |
+| provider     | string     |             |
+| uid          | string     |             |
+
+### Association
+- belongs_to :user
