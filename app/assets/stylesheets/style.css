@@ -118,6 +118,11 @@ a {
   cursor: pointer;
 }
 
+.sns_link {
+  margin: 0 20px 10px 0;
+  color: #63aef5;
+}
+
 /* メイン */
 
 .greeting{
@@ -321,3 +326,4 @@ a {
     width: 100%;
   }
 }
+
