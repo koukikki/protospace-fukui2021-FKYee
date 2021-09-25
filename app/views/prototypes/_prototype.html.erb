@@ -2,7 +2,7 @@
   <%= link_to image_tag(prototype.image, class: :card__img ), prototype_path(prototype.id) %>
   <div class="card__body">
   <div class="flex_card">
-    <%= link_to prototype.name, root_path, class: :card__title%> 
+    <%= link_to prototype.name, prototype_path(prototype.id), class: :card__title%> 
     <div class="card__assessment">
     <% if prototype.assessment_ave.nil?%>
     <%= "平均点: -点" %>
